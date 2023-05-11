@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicons -->
+        <link href="Image/BSI.png" rel="icon">
+
+        <script language="javascript">
+            mess = "Lovely Redyafri^Tugas03^";
+            scrollSpeed = 250;
+            lineDelay = 0;
+            txt = "";
+            function scrollText(pos) {
+                if (mess.charAt(pos) != '^') {
+                    txt=txt+mess.charAt(pos);
+                    document.title=txt;
+                    prt=scrollSpeed;
+                }
+                else {
+                    prt = lineDelay;
+                    txt = "";
+                    if (pos==mess.length -1) pos=-1;
+                }
+                pos++;
+                setTimeout("scrollText('"+pos+"')",prt)
+            }
+            scrollText(0);
+        </script>
+        <title>Tugas 03</title>
+    </head>
+    <body background="Image/logo.jpg" background-size="cover">
+        <h1 style="color:#000000; text-align: center;"><marquee width="48%" bgcolor="white"><i>Best Price, Choose Your Favorite Color</i></marquee></h1>
+            <table cellpadding="3" border="1" align="center">
+                <thead>
+                    <tr>    
+                        <td colspan="3" align="center" style=" background-color:  white;"> <b>DAFTAR PRODUK</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center" width="120" rowspan="3" bgcolor="white"><img src="Image/th.jpeg" alt="" width="100px" height="100px"></td>
+                        <td width="70" bgcolor="pink">Nama<br>Produk</td>
+                        <td bgcolor="white">IPhone 11 Full Color Edition</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="pink">Harga</td>
+                        <td bgcolor="white">Rp6.999.000</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="pink">Fitur <br> Produk</b></td>
+                        <td width="420" bgcolor="white">
+                            <ul>
+                                <li style="color: black;">Chip A13 Bionic</li>
+                                <li style="color: black;">Sistem kamera ganda 12 MP: Kamera Wide dan Ultra Wide</li>
+                                <li style="color: black;">Mampu merekam video 4K pada kecepatan 24 fps, 25 fps, 30 fps, atau 60 fps</li>
+                                <li style="color: black;">Li-Ion 3110 mAh, non-removable (11.91 Wh)</li>
+                                <li style="color: black;">Black, Green, Yellow, Purple, Red, White </br> meter</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </body>
+
+</html>
